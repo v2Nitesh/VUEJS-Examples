@@ -1,23 +1,29 @@
 const app = Vue.createApp({
-    data(){
+    data() {
         return {
-            tasks:[],
+            tasks: [],
             enteredTasks: '',
             toggleTaskList: false
         }
     },
-    methods:{
+    computed: {
+        buttonCaption() {
+            return this.toggleTaskList ? 'Hide List' : 'Show List'
+        }
+
+    },
+    methods: {
         addTask() {
-            if (this.enteredTasks !== ''){
+            if (this.enteredTasks !== '') {
                 this.tasks.push(this.enteredTasks)
-                if (this.tasks.length === 1){
+                if (this.tasks.length === 1) {
                     this.toggleTaskList = !this.toggleTaskList;
 
                 }
             }
-            
+
         },
-        toggleButton(){
+        toggleButton() {
             this.toggleTaskList = !this.toggleTaskList;
 
         }
