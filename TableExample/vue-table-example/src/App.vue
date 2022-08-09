@@ -1,17 +1,20 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <TableView/>
+  <!-- <TableView/> -->
+  <SearchBox/>
 </template>
 
 
 <script>
-import TableView from './components/TableView.vue'
+// import TableView from './components/TableView.vue'
+import SearchBox from './components/SearchBox.vue'
 
 
 export default {
   name: 'App',
   components: {
-    TableView
+    // TableView,
+    SearchBox
   }
 }
 </script>
