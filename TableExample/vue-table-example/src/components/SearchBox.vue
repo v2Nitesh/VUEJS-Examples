@@ -2,7 +2,7 @@
   Table Data
   <input v-model="searchText" @input="searchInput" />
   <button type="text" @click="searchInput">Search</button>
-  <div>
+  <div v-if="rows.length > 0">
     <vue-good-table :columns="columns" :rows="rows" />
   </div>
 </template>
